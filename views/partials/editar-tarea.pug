@@ -1,0 +1,19 @@
+#editarTareaModal.modal.fade(tabindex="-1")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Editar Tarea
+        button.btn-close(type="button" data-bs-dismiss="modal")
+      .modal-body
+        form#formEditarTarea
+          input#editarId(type="hidden")
+          .mb-3
+            label.form-label(for="editarTitulo") Título
+            input#editarTitulo.form-control(type="text" required)
+          .mb-3
+            .form-check
+              input#editarCompletado.form-check-input(type="checkbox")
+              label.form-check-label(for="editarCompletado") Completado
+      .modal-footer
+        button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cancelar
+        button.btn.btn-primary(type="submit") Guardar Cambios

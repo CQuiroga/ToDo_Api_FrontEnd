@@ -1,0 +1,17 @@
+#loginModal.modal.fade(tabindex="-1")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Iniciar Sesión
+        button.btn-close(type="button" data-bs-dismiss="modal")
+      .modal-body
+        form#formLogin
+          .mb-3
+            label.form-label(for="loginEmail") Email
+            input#loginEmail.form-control(type="email" required)
+          .mb-3
+            label.form-label(for="loginPassword") Contraseña
+            input#loginPassword.form-control(type="password" required)
+      .modal-footer
+        button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cancelar
+        button.btn.btn-primary(type="submit") Iniciar Sesión

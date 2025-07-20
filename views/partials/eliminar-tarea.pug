@@ -1,0 +1,12 @@
+#eliminarTareaModal.modal.fade(tabindex="-1")
+  .modal-dialog
+    .modal-content
+      .modal-header.bg-danger.text-white
+        h5.modal-title Eliminar Tarea
+        button.btn-close(type="button" data-bs-dismiss="modal")
+      .modal-body
+        p ¿Estás seguro de eliminar esta tarea?
+        input#eliminarId(type="hidden")
+      .modal-footer
+        button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cancelar
+        button.btn.btn-danger(type="button" onclick="confirmarEliminacion()") Eliminar

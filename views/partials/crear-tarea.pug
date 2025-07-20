@@ -1,0 +1,14 @@
+#crearTareaModal.modal.fade(tabindex="-1")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Crear Nueva Tarea
+        button.btn-close(type="button" data-bs-dismiss="modal")
+      .modal-body
+        form#formCrearTarea
+          .mb-3
+            label.form-label(for="tituloTarea") Título
+            input#tituloTarea.form-control(type="text" required)
+      .modal-footer
+        button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cancelar
+        button.btn.btn-primary(type="submit") Guardar

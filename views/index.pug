@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  #tareasContainer
+    if isAuthenticated
+      .d-flex.justify-content-between.mb-4
+        h1 Mis Tareas
+        button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#crearTareaModal")
+          i.bi.bi-plus-lg
+          |  Nueva Tarea
+
+      include partials/crear-tarea
+      include partials/editar-tarea
+      include partials/eliminar-tarea
+
+      .table-responsive
+        table#tablaTareas.table.table-striped.table-hover
+          thead
+            tr
+              th Título
+              th Estado
+              th Acciones
+          tbody
+    else
+      .text-center.py-5
+        h2 Bienvenido a la App de Tareas
+        p.mb-4 Inicia sesión o regístrate para gestionar tus tareas
+        .d-flex.justify-content-center.gap-3
+          button.btn.btn-primary.btn-lg(type="button" data-bs-toggle="modal" data-bs-target="#loginModal") Iniciar Sesión
+          button.btn.btn-success.btn-lg(type="button" data-bs-toggle="modal" data-bs-target="#registerModal") Registrarse
+
+  include partials/login
+  include partials/register
